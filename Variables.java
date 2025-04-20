@@ -16,14 +16,37 @@ public class Variables {
         char currency = '$';
 
         boolean isStudent = true;
-        boolean forSale = false;
+        boolean forSale = true;
         boolean isOnline = true;
 
-        if(isStudent){        {
+        String name = "Bro Code";
+        String food = "pizza";
+        String email = "fake123@gmail.com";
+        String car = "Mustang";
+        String color = "red";
+
+        System.out.println("Your faviout food is " + food);
+        System.out.println("Your email is " + email);
+        System.out.println("Hello " + name);
+        System.out.println("You are " + age + " years old");
+        System.out.println("Your gpa is: " + gpa);
+        System.out.println("Your average letter grade is: " + grade);
+        System.out.println("Your choice is a " + color +" "+ year +" "+ car);
+        System.out.println("The price is: "+ currency+price);
+
+        if(forSale){
+            System.out.println("There is a " + car + " for sale");
+        }
+        else{
+            System.out.println("The " + car + "is not for sale");
+        }
+
+        /*if(isStudent){
             System.out.println("You are a student");
         }
         else {
             System.out.println("You are NOT a student");
         }
+         */
     }
 }
