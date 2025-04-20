@@ -15,8 +15,15 @@ public class Variables {
         char symbol = '!';
         char currency = '$';
 
+        boolean isStudent = true;
+        boolean forSale = false;
+        boolean isOnline = true;
 
-
-        System.out.println(currency);
+        if(isStudent){        {
+            System.out.println("You are a student");
+        }
+        else {
+            System.out.println("You are NOT a student");
+        }
     }
 }
