@@ -29,6 +29,5 @@ public class madlibsgame {
         System.out.println("I was " + adjective3 + "!");
 
         scanner.close();
-
     }
 }
