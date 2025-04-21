@@ -25,7 +25,7 @@ public class Variables {
         String car = "Mustang";
         String color = "red";
 
-        System.out.println("Your faviout food is " + food);
+        System.out.println("Your favourite food is " + food);
         System.out.println("Your email is " + email);
         System.out.println("Hello " + name);
         System.out.println("You are " + age + " years old");
