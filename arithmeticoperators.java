@@ -22,17 +22,18 @@ public class arithmeticoperators {
 
         int x = 1;
         //x ++;
-       //x ++;
-       //x ++;
-       //x ++;
+        //x ++;
+        //x ++;
+        //x ++;
         //x--;
         //x--;
         //x--;
         //x--;
 
-        //
+        // ORDER OF OPERATIONS [P-E-M-D-A-S]
+        double result = 3 + 4 * (7 - 5) / 2;
 
-        System.out.println(x);
+        System.out.println(result);
 
     }
 }
