@@ -5,15 +5,14 @@ public class ifstatement {
 
         //if statement = performs a block of code if its condition is true
 
-        int age = 25;
+        int age = -1;
 
         if (age >= 18) {
             System.out.println("You are an adult");
-        }
-        else{
+        } else if (age < 0) {
+            System.out.println("You haven't been born yet!");
+        } else {
             System.out.println("You are a child");
         }
-
-
     }
 }
