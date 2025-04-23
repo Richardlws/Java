@@ -27,7 +27,5 @@ public class calculator {
         //System.out.println("The amount after " + years + " years is: $" + amount);
         System.out.printf("The amount after %d years is $%.2f",years,amount);
         scanner.close();
-
-
     }
 }
