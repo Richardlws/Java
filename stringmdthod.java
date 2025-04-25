@@ -1,7 +1,7 @@
 public class stringmdthod {
     public static void main(String[] args){
 
-        String name = "";
+        String name = "Password";
 
         //int length = name.length();
         //char letter = name.charAt(0);
@@ -20,7 +20,31 @@ public class stringmdthod {
         //System.out.println(index);
         //System.out.println(lastIndex);
         //System.out.println(name);
-        System.out.println(name.isEmpty());
+        //System.out.println(name.isEmpty());
+        /*if(name.isEmpty()){
+            System.out.println("Your name is empty");
+        }
+        else{
+
+            System.out.printf("Hello %s",name);
+
+        }
+
+        if(name.contains(" ")){
+            System.out.println("Your name contain a space");
+        }
+        else{
+            System.out.println("Your name doesn't contain any spaces");
+        }
+        */
+
+        if(name.equalsIgnoreCase("password")){
+            System.out.println("Your name can't be password");
+        }
+        else{
+            System.out.println("Hello " + name);
+        }
+
 
     }
 }
