@@ -9,6 +9,7 @@ public class calculatorpro {
         double num2;
         char operator;
         double result = 0;
+        boolean validOperation = true;
 
         System.out.print("Enter the first number: ");
         num1 = scanner.nextDouble();
@@ -21,18 +22,25 @@ public class calculatorpro {
             case '+' -> result = num1 + num2;
             case '-' -> result = num1 - num2;
             case '*' -> result = num1 * num2;
-            case '/' -> result = num1 / num2;
+            case '/' -> {
+                if (num2 == 0) {
+                    System.out.println("Cannot divide by zero!");
+                    validOperation = false;
+                } else {
+                    result = num1 / num2;
+                }
+            }
             case '^' -> result = Math.pow(num1, num2);
-            default -> System.out.println("The operator is invalid");
+            default -> {
+                System.out.println("The operator is invalid");
+                validOperation = false;
+            }
         }
-        System.out.printf("The result is: %.2f" , result);
+        if(validOperation){
+            System.out.printf("The result is: %.2f" , result);
+        }
 
         scanner.close();
-
-
     }
-
-
-
 }
 
