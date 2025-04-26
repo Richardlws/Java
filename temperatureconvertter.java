@@ -14,7 +14,7 @@ public class temperatureconvertter {
         unit = scanner.next().toUpperCase();
 
         newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : temp * 1.8 + 32;
-        System.out.printf("%.2f°",newTemp);
+        System.out.printf("%.1f°",newTemp);
 
 
         //System.out.println(temp);
