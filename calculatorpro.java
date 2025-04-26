@@ -32,7 +32,7 @@ public class calculatorpro {
             }
             case '^' -> result = Math.pow(num1, num2);
             default -> {
-                System.out.println("The operator is invalid");
+                System.out.println("Invalid operator");
                 validOperation = false;
             }
         }
