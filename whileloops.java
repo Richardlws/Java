@@ -39,7 +39,7 @@ public class whileloops {
 
 
         Scanner scanner = new Scanner(System.in);
-        int number = 0;
+        int number;
          do {
             System.out.print("Enter a number between 1-10: ");
             number = scanner.nextInt();
