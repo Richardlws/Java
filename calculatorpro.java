@@ -12,9 +12,9 @@ public class calculatorpro {
 
         System.out.print("Enter the first number: ");
         num1 = scanner.nextDouble();
-        System.out.print("Enter  enter num2: ");
+        System.out.print("Enter the second number: ");
         num2 = scanner.nextDouble();
-        System.out.println("Enter an operator(+,-,*,/,^): ");
+        System.out.print("Enter an operator(+,-,*,/,^): ");
         operator = scanner.next().charAt(0);
 
         switch (operator) {
@@ -23,9 +23,9 @@ public class calculatorpro {
             case '*' -> result = num1 * num2;
             case '/' -> result = num1 / num2;
             case '^' -> result = Math.pow(num1, num2);
-
+            default -> System.out.println("The operator is invalid");
         }
-        System.out.print("The result is: " + result);
+        System.out.printf("The result is: %.2f" , result);
 
         scanner.close();
 
