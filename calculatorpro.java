@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import static
+
 public class calculatorpro {
     public static void main(String[] args) {
 
@@ -8,7 +8,7 @@ public class calculatorpro {
         double num1;
         double num2;
         char operator;
-        double result;
+        double result = 0;
 
         System.out.print("Enter the first number: ");
         num1 = scanner.nextDouble();
@@ -22,15 +22,17 @@ public class calculatorpro {
             case '-' -> result = num1 - num2;
             case '*' -> result = num1 * num2;
             case '/' -> result = num1 / num2;
-            case '^' -> result = pow(num1,num2);
-            System.out.print("The result is: " + result);
-
+            case '^' -> result = Math.pow(num1, num2);
 
         }
-
+        System.out.print("The result is: " + result);
 
         scanner.close();
 
 
     }
+
+
+
 }
+
