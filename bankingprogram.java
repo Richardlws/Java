@@ -1,14 +1,13 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class bankingprogram {
 
     static Scanner scanner = new Scanner(System.in);
-    static double balance = 0;
+
     public static void main(String[] args) {
         // JAVA BANKING PROGRAM FOR BEGINNERS
 
-
+        double balance = 0;
         boolean isRunning = true;
         int choice;
         while (isRunning) {
@@ -26,11 +25,16 @@ public class bankingprogram {
             switch (choice) {
                 case 1 -> showBalance(balance);
                 case 2 -> balance += deposit();
-                case 3 -> balance -= withdraw();
+                case 3 -> balance -= withdraw(balance);
                 case 4 -> isRunning = false;
                 default -> System.out.println("INVALID CHOICE");
             }
         }
+
+
+        System.out.println("***************************");
+        System.out.println("Thank you! Have a nice day!");
+        System.out.println("***************************");
         scanner.close();
     }
 
@@ -54,15 +58,19 @@ public class bankingprogram {
 
     }
 
-    static double withdraw() {
-
+    static double withdraw(double balance) {
         double amount;
-        System.out.print("Enter an amount to be withdraw: ");
+        System.out.print("Enter an amount to be withdrawn: ");
         amount = scanner.nextDouble();
         if (amount > balance) {
-            System.out.println("You haven't enough balance");
+            System.out.println("INSUFFICIENT FUNDS");
             return 0;
-        } else {
+        }
+        else if (amount <0){
+            System.out.println("Amount can't be negative");
+            return 0;
+        }
+        else {
             return amount;
         }
     }
