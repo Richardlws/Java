@@ -1,4 +1,4 @@
-public class nestedloop {
+public class nestedif {
     public static void main(String[] args) {
         boolean isStudent = true;
         boolean isSenior = false;
