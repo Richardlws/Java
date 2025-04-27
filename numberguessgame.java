@@ -9,16 +9,19 @@ public class numberguessgame {
         int guessnumber=0;
         int number;
         int guess=0;
-        number = random.nextInt(100) + 1;
+        int min = 1;
+        int max = 100;
+        number = random.nextInt(1,100);
         System.out.println("Number Guessing Game");
+        System.out.printf("Guess a number between %d-%d\n",min,max);
 
         do {
-            System.out.print("Enter a guess (1~100): ");
+            System.out.print("Enter a guess: ");
             guessnumber = scanner.nextInt();
             if (guessnumber < number) {
-                System.out.println("too low");
+                System.out.println("Too Low! Try again");
             } else if (guessnumber > number) {
-                System.out.println("too high");
+                System.out.println("too high! Try again");
             }
             guess++;
         }while(guessnumber != number);
@@ -26,7 +29,7 @@ public class numberguessgame {
 
         System.out.println("Your number is: " + guessnumber);
         System.out.println("Computer number is: " + number);
-        System.out.printf("You guessed %d times\n",guess);
+        System.out.printf("# of attemps:%d\n",guess);
         System.out.println("You have won!");
 
 
