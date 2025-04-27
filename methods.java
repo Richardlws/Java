@@ -10,6 +10,7 @@ public class methods {
         }
         System.out.println(square(3));
         System.out.println(cube(3));
+        System.out.println(getFullName("Spongebob", "Squarepants"));
     }
     static void happyBirthday(String name,int age){
         System.out.println("Happy Birthday to you!");
@@ -23,4 +24,8 @@ public class methods {
     static double cube(double number){
         return number*number*number;
     }
+    static String getFullName(String first,String last){
+        return first + " " +last;
+    }
+
 }
