@@ -76,6 +76,7 @@ public class dicerollerprogram {
             case 4 -> System.out.println(dice4);
             case 5 -> System.out.println(dice5);
             case 6 -> System.out.println(dice6);
+            default -> System.out.println("Invalid roll");
 
         }
     }
