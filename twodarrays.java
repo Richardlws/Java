@@ -24,18 +24,15 @@ public class twodarrays {
             //System.out.print(foods[1]+" ");
             System.out.print("\n");
         }*/
-
         char[][] telephone = {{'1', '2', '3'},
                 {'4', '5', '6'},
                 {'7', '8', '9'},
                 {'*', '0', '#'}};
-        for (char[] rows : telephone) {
-            for (char row : rows) {
-                System.out.print(row + " ");
+        for (char[] row : telephone) {
+            for (char number : row) {
+                System.out.print(number + " ");
             }
             System.out.print("\n");
-
         }
-
     }
 }
