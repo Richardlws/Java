@@ -10,13 +10,25 @@ public class quizgame {
                             "What was the first programming language?"};
         String[][] options = {{"1.Storing files","2.Encrypting data","3.Directing internet traffic","4.Managing passwords"},
                               {"1.CPU","2.Hard Drive","3.RAM","4.GPU"},
-                              {"1.2000","2.20004","3.2006","4.2008"},
+                              {"1.2000","2.2004","3.2006","4.2008"},
                               {"1.Steve Jobs","2.Bill Gates","3.Alan Turing","4.Charles Babbage"},
                               {"1.COBOL","2.C","3.Fortran","4.Assembly"} ,
                               };
         System.out.println("******************************");
         System.out.println("Welcome to the Java Quiz Game!");
         System.out.println("******************************");
+        System.out.print("\n");
+        for(int i =0;i<question.length;i++){
+            System.out.println(question[i]);
+            for(String[] ops:options) {
+                for(String op:ops){
+                    System.out.println(op);
+                }
+
+
+            }
+        }
+
         /*
         System.out.println("What is the main function of a router?");
         System.out.print("\n");
@@ -39,9 +51,9 @@ public class quizgame {
     }
     static boolean xxxx(int choice){
         switch(choice){
-            case:1-> return false;*/
+            case:1-> return false;
 
-        }
+        }*/
 
     }
 }
