@@ -1,13 +1,17 @@
 public class array {
     public static void main(String[] args) {
 
-        String[] fruit = {"apple", "orange", "banana", "coconut"};
+        String[] fruits = {"apple", "orange", "banana", "coconut"};
         //fruit[0]= "pineapple";
-        int numofFruits = fruit.length;
+        int numofFruits = fruits.length;
 
         //System.out.println(numofFruits);
-        for (int i = 0; i < numofFruits; i++) {
-            System.out.println(fruit[i]);
+        //for (int i = 0; i < numofFruits; i++) {
+            //System.out.println(fruits[i]);
+            //System.out.print(fruits[i] + " ");
+        for(String fruit : fruits){
+            System.out.println(fruit);
         }
+
     }
 }
