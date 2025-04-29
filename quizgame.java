@@ -24,8 +24,8 @@ public class quizgame {
         System.out.print("\n");
         for (int i = 0; i < question.length; i++) {
             System.out.println(question[i]);
-            for (String ops : options[i]) {
-                System.out.println(ops);
+            for (String option : options[i]) {
+                System.out.println(option);
             }
             System.out.print("Enter your answer: ");
             guess = Character.toUpperCase(scanner.nextLine().charAt(0));
