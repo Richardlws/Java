@@ -39,10 +39,9 @@ public class rockscissorpaper {
 
         }while(playAgain.equals("yes"));
         //System.out.println("Computer choice: " + computerChoice);
-        System.out.println("***************");
-        System.out.println("Thanks For Play");
-        System.out.println("***************");
-
+        System.out.println("******************");
+        System.out.println("Thanks For Playing");
+        System.out.println("******************");
         scanner.close();
     }
 }
