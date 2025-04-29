@@ -107,7 +107,6 @@ public class slotmachine {
                 default -> 0;
             };
         }
-
         return 0;
     }
 }
