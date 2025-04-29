@@ -4,7 +4,7 @@ public class quizgame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char guess;
-        int score=0;
+        int score = 0;
         String[] question = {"1.What is the main function of a router?",
                 "2.Which part of the computer is considered the brain?",
                 "3.What year was Facebook launched?",
@@ -27,19 +27,22 @@ public class quizgame {
             for (String option : options[i]) {
                 System.out.println(option);
             }
-            System.out.print("Enter your answer: ");
+            System.out.print(" Enter your guess: ");
             guess = Character.toUpperCase(scanner.nextLine().charAt(0));
 
             if (guess == answer[i]) {
-                System.out.println("You are right!");
-                score +=1;
-            }
-            else{
-                System.out.println("You are wrong!");
-                System.out.println("The right answer is: "+ answer[i]);
+                System.out.println("********");
+                System.out.println("CORRECT!");
+                System.out.println("********");
+                score += 1;
+            } else {
+                System.out.println("******");
+                System.out.println("WRONG!");
+                System.out.println("******");
+                System.out.println("The right answer is: " + answer[i]);
             }
 
         }
-        System.out.print("Your score is: "+score+"/"+question.length);
+        System.out.print("Your final score is: " + score + " out of " + question.length);
     }
 }
