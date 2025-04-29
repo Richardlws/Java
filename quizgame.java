@@ -1,59 +1,45 @@
 import java.util.Scanner;
+
 public class quizgame {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int guess;
-        String[] question={"What is the main function of a router?",
-                            "Which part of the computer is considered the brain?",
-                            "What year was Facebook launched?",
-                            "Who is known as the father of computer?",
-                            "What was the first programming language?"};
-        String[][] options = {{"1.Storing files","2.Encrypting data","3.Directing internet traffic","4.Managing passwords"},
-                              {"1.CPU","2.Hard Drive","3.RAM","4.GPU"},
-                              {"1.2000","2.2004","3.2006","4.2008"},
-                              {"1.Steve Jobs","2.Bill Gates","3.Alan Turing","4.Charles Babbage"},
-                              {"1.COBOL","2.C","3.Fortran","4.Assembly"} ,
-                              };
+        char guess;
+        int score=0;
+        String[] question = {"1.What is the main function of a router?",
+                "2.Which part of the computer is considered the brain?",
+                "3.What year was Facebook launched?",
+                "4.Who is known as the father of computer?",
+                "5.What was the first programming language?"};
+        String[][] options = {{"  A.Storing files", "  B.Encrypting data", "  C.Directing internet traffic", "  D.Managing passwords"},
+                {"  A.CPU", "  B.Hard Drive", "  C.RAM", "  D.GPU"},
+                {"  A.2000", "  B.2004", "  C.2006", "  D.2008"},
+                {"  A.Steve Jobs", "  B.Bill Gates", "  C.Alan Turing", "  D.Charles Babbage"},
+                {"  A.COBOL", "  B.C", "  C.Fortran", "  D.Assembly"},
+        };
+        char[] answer = {'C', 'A', 'B', 'D', 'C'};
+
         System.out.println("******************************");
         System.out.println("Welcome to the Java Quiz Game!");
         System.out.println("******************************");
         System.out.print("\n");
-        for(int i =0;i<question.length;i++){
+        for (int i = 0; i < question.length; i++) {
             System.out.println(question[i]);
-            for(String[] ops:options) {
-                for(String op:ops){
-                    System.out.println(op);
-                }
-
-
+            for (String ops : options[i]) {
+                System.out.println(ops);
             }
+            System.out.print("Enter your answer: ");
+            guess = Character.toUpperCase(scanner.nextLine().charAt(0));
+
+            if (guess == answer[i]) {
+                System.out.println("You are right!");
+                score +=1;
+            }
+            else{
+                System.out.println("You are wrong!");
+                System.out.println("The right answer is: "+ answer[i]);
+            }
+
         }
-
-        /*
-        System.out.println("What is the main function of a router?");
-        System.out.print("\n");
-        System.out.println("1.Storing files");
-        System.out.println("2.Encrypting data");
-        System.out.println("3.Directing internet traffic");
-        System.out.println("4.Managing passwords");
-        System.out.print("Your guess: ");
-        guess = scanner.nextInt();
-
-        xxxx(guess);
-        if(guess==3){
-            System.out.println("Yes! You are right!");
-        }
-        else{
-            System.out.println("Sorry! You are wrong!Think about it again");
-        }
-
-        scanner.close();
-    }
-    static boolean xxxx(int choice){
-        switch(choice){
-            case:1-> return false;
-
-        }*/
-
+        System.out.print("Your score is: "+score+"/"+question.length);
     }
 }
