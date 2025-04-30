@@ -15,7 +15,6 @@ public class weightconverter {
 
         System.out.print("Choose an option: ");
         choice = scanner.nextInt();
-        //System.out.println(choice);
 
 
         if (choice == 1) {
