@@ -9,6 +9,7 @@ public class Student {
         this.name = name;
         this.age = age;
         this.gpa = gpa;
+        this.isEnrolled = true;
     }
 
 }
