@@ -6,7 +6,7 @@ public class objectoriented {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        Car car1 = new Car();
+        Cartemp car1 = new Cartemp();
 
         /*System.out.println(car.name);
         System.out.println(car.model);
@@ -19,7 +19,7 @@ public class objectoriented {
         car.drive();
         car.brake();*/
 
-        Car car2 = new Car();
+        Cartemp car2 = new Cartemp();
         System.out.println(car1.name+" "+car1.model);
         System.out.println(car2.name+" "+car2.model);
 
