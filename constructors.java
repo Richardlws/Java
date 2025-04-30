@@ -20,6 +20,9 @@ public class constructors {
         System.out.println(student3.gpa);
         System.out.println(student3.isEnrolled);
 
+        student1.study();
+        student2.study();
+        student3.study();
 
     }
 }
