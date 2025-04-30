@@ -3,6 +3,12 @@ public class User {
     String email;
     int age;
 
+    User(){
+        this.username = "Guest";
+        this.email = "Not provided";
+        this.age = 0;
+    }
+
     User(String username){
     this.username = username;
     this.email = "Not provided";
