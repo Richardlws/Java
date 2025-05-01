@@ -1,8 +1,8 @@
-public class inheritance {
+/*public class inheritance {
     public static void main(String[] args) {
         Animal animal = new Animal();
         //animal.eat();
-        Dog dog = new Dog();
+        Dogtemp dog = new Dogtemp();
         Cat cat = new Cat();
         Plant plant =new Plant();
 
@@ -25,8 +25,8 @@ public class inheritance {
      }
      else{
          System.out.println("Sorry! The dog is not alive!");
-     }*/
+     }
 
 
     }
-}
+}*/
