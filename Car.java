@@ -7,7 +7,7 @@ public class Car {
         this.color = color;
     }
 
-    void drive() {
+    void drive(){
         System.out.println("You drive the " + this.color + " " + this.model);
     }
 }
