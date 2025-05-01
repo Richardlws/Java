@@ -1,4 +1,4 @@
-public class constructors {
+/*public class constructorstemp {
     public static void main(String[] args){
 
         Student student1 = new Student("Spongebob",30,3.2);
@@ -26,3 +26,4 @@ public class constructors {
 
     }
 }
+*/

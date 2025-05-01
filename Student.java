@@ -1,6 +1,6 @@
-public class Student {
+public class Student extends Person {
 
-    String name;
+    /*String name;
     int age;
     double  gpa;
     boolean isEnrolled;
@@ -13,6 +13,17 @@ public class Student {
     }
     void study(){
         System.out.println(this.name + " is studying!");
+    }*/
+    double gpa;
+
+    Student(String first, String last, double gpa) {
+        super(first, last);
+        this.gpa = gpa;
+
+    }
+
+    void showGpa() {
+        System.out.println(first + " " + last + "'s GPA is: " + gpa);
     }
 
 }
