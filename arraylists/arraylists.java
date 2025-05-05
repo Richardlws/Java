@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class arraylists {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*ArrayList<Integer> list = new ArrayList<>();
 
         list.add(3);
@@ -48,13 +48,18 @@ public class arraylists {
 
         ArrayList<String> foods = new ArrayList<>();
 
-        System.out.println("Enter the # of food you would like: ");
+        System.out.print("Enter the # of food you would like: ");
         int numofFood = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 1; i <= numofFood; i++) {
+            System.out.print("Enter food # " + i + ": ");
+            String food = scanner.nextLine();
+            foods.add(food);
+        }
+        System.out.println(foods);
 
 
         scanner.close();
-
-
 
 
     }
