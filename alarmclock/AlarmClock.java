@@ -14,10 +14,10 @@ public class AlarmClock implements Runnable {
     private final String filePath;
     private final Scanner scanner;
 
-    AlarmClock(LocalTime alarmTime,String filePath,Scanner scanner) {
+    AlarmClock(LocalTime alarmTime, String filePath, Scanner scanner) {
         this.alarmTime = alarmTime;
-        this.filePath= filePath;
-        this.scanner=scanner;
+        this.filePath = filePath;
+        this.scanner = scanner;
     }
 
     @Override
@@ -36,9 +36,9 @@ public class AlarmClock implements Runnable {
 
                 //System.out.println(hours + ":" + minutes + ":" + seconds);
                 System.out.printf("\r%02d:%02d:%02d",
-                                    now.getHour(),
-                                    now.getMinute(),
-                                    now.getSecond());
+                        now.getHour(),
+                        now.getMinute(),
+                        now.getSecond());
 
                 //System.out.println(LocalTime.now());
             } catch (InterruptedException e) {
@@ -50,27 +50,24 @@ public class AlarmClock implements Runnable {
         playSound(filePath);
 
     }
-    private void playSound(String filePath){
+
+    private void playSound(String filePath) {
         File audioFile = new File(filePath);
 
-        try(AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile)){
+        try (AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile)) {
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);
             clip.start();
-            System.out.print("Press *Enter* to stop the alarm");
+            System.out.print("Press *Enter* to stop the alarm: ");
             scanner.nextLine();
             clip.stop();
-
             scanner.close();
             //Thread.sleep(5000);
-        }
-        catch(UnsupportedAudioFileException e){
+        } catch (UnsupportedAudioFileException e) {
             System.out.println("Audio file format is not supported");
-        }
-        catch(LineUnavailableException e){
+        } catch (LineUnavailableException e) {
             System.out.println("Audio is unavailable");
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Error reading audio file");
         }
         //catch(InterruptedException e ){
