@@ -13,6 +13,7 @@ public class MyRunnable implements Runnable{
             }
             if(i == 5){
                 System.out.println("Time's up!");
+                System.exit(0);
             }
         }
     }
