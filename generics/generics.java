@@ -10,6 +10,12 @@ public class generics {
         fruits.add("orange");
         fruits.add("banana");*/
 
+        Box<String> box = new Box<>();
+
+        box.setItem("banana");
+
+        System.out.println(box.getItem());
+
 
     }
 }
