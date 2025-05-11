@@ -1,23 +1,23 @@
 package alarmclock;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.Scanner;
 
 public class AlarmClock implements Runnable {
 
     private final LocalTime alarmTime;
     private final String filePath;
+    private final Scanner scanner;
 
-    AlarmClock(LocalTime alarmTime,String filePath) {
+    AlarmClock(LocalTime alarmTime,String filePath,Scanner scanner) {
         this.alarmTime = alarmTime;
         this.filePath= filePath;
+        this.scanner=scanner;
     }
 
     @Override
@@ -52,9 +52,17 @@ public class AlarmClock implements Runnable {
     }
     private void playSound(String filePath){
         File audioFile = new File(filePath);
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
-        try{
 
+        try(AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile)){
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+            System.out.print("Press *Enter* to stop the alarm");
+            scanner.nextLine();
+            clip.stop();
+
+            scanner.close();
+            //Thread.sleep(5000);
         }
         catch(UnsupportedAudioFileException e){
             System.out.println("Audio file format is not supported");
@@ -65,6 +73,9 @@ public class AlarmClock implements Runnable {
         catch (IOException e){
             System.out.println("Error reading audio file");
         }
+        //catch(InterruptedException e ){
+        //    throw new RuntimeException(e);
+        //}
 
     }
 }
