@@ -1,5 +1,6 @@
 package hangmangame;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -18,7 +19,20 @@ public class hangmangame {
         System.out.println("************************");
         System.out.println("Welcome to Java Hangman!");
         System.out.println("************************");
-        //System.out.println(getHangmanArt(2));
+        //System.out.println(getHangmanArt(6));
+        System.out.print("Word: ");
+        for (char c : wordState) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+        System.out.print("Guess a letter: ");
+        char guess = scanner.next().toLowerCase().charAt(0);
+        //System.out.println(guess);
+        //System.out.println(word.indexOf(guess));
+        if (word.indexOf(guess) >= 0) {
+
+
+        }
 
         scanner.close();
     }
