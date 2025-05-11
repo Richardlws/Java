@@ -27,7 +27,7 @@ public class datetime {
 
         System.out.println(date);*/
 
-        LocalDateTime date1 = LocalDateTime.of(2025, 1, 2, 12, 0, 0);
+        LocalDateTime date1 = LocalDateTime.of(2025, 1, 1, 0, 0, 0);
         LocalDateTime date2 = LocalDateTime.of(2025, 1, 1, 0, 0, 0);
 
 
@@ -38,6 +38,8 @@ public class datetime {
             System.out.println(date1 + " is earlier than " + date2);
         } else if (date1.isAfter(date2)) {
             System.out.println(date1 + " is later than" + date2);
+        } else if (date1.isEqual(date2)) {
+            System.out.println(date1 + " is equal to " + date2);
         }
 
 
