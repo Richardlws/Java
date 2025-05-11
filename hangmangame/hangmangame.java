@@ -59,12 +59,13 @@ public class hangmangame {
                     if (word.charAt(i) == guess) {
                         wordState.set(i, guess);
                     }
-                    if(!wordState.contains('_')){
-                        System.out.println(getHangmanArt(wrongGuesses));
-                        System.out.println("You Win!");
-                        System.out.println("The word is " + word);
-                        break;
-                    }
+                }
+
+                if(!wordState.contains('_')){
+                    System.out.println(getHangmanArt(wrongGuesses));
+                    System.out.println("You Win!");
+                    System.out.println("The word is " + word);
+                    break;
                 }
             } else {
                 wrongGuesses++;
