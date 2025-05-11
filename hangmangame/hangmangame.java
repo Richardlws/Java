@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -22,8 +23,11 @@ public class hangmangame {
         } catch (IOException e) {
             System.out.println("Something went wrong");
         }
+        Random random = new Random();
+        String word = words.get(random.nextInt(words.size()));
+        System.out.println(word);
         //System.out.println(words);
-        /*String word = "watermelon";
+
         Scanner scanner = new Scanner(System.in);
         ArrayList<Character> wordState = new ArrayList<>();
         int wrongGuesses = 0;
@@ -73,7 +77,7 @@ public class hangmangame {
             System.out.println("The word was " + word);
         }
 
-        scanner.close();*/
+        scanner.close();
     }
 
     static String getHangmanArt(int WrongGuesses) {
